@@ -2,12 +2,9 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+__Author__: """Rebekah Eloise Miller with Help from Jalal"""
 
 def main():
-    """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_cowsay.settings')
-    try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
