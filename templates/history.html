@@ -1,0 +1,22 @@
+<body>
+    <button><a href="/">Home</a></button>
+    <button><a href="/history/">History</a></button>
+    <br>
+    {% if cowsay_list %}
+    <h4>Last 10 history</h4>
+    {%for blue in cowsay_list%}
+    <div style="width:auto; float: left;">
+        <fieldset>
+            <legend>Counter: {{ forloop.counter }}</legend>
+            <pre>
+                {{ blue }}
+            </pre>
+        </fieldset>
+    </div>
+
+    {%endfor%}
+    {% else %}
+    <h5>No data found</h5>
+    {% endif %}
+
+</body>

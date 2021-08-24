@@ -1,0 +1,20 @@
+<body>
+    <button><a href="/">Home</a></button>
+    <button><a href="/history/">History</a></button>
+    <br>
+    <br>
+    {% if blue %}
+    <pre>
+        {{ blue }}
+    </pre>
+    <br>
+    <br>
+    {% endif %}
+    <!-- {{blue}} -->
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <!-- Enter the Text: <input type="text" name="cowsay_string" id="cowsay_string" /> -->
+        <input type="submit" value="Submit" />
+    </form>
+</body>
